@@ -1,7 +1,7 @@
 
 const textColor = "#f5f7f4";
 const gridColor = "#2b312b";
-const red = "#960018" ;
+const yellow = "#d3f626" ;
 
 Chart.defaults.color = textColor;
 Chart.defaults.borderColor = gridColor;
@@ -14,7 +14,7 @@ new Chart(document.getElementById("musicChart"), {
         datasets: [{
             label: "Valor demonstrativo",
             data: [80, 65, 95, 50],
-            backgroundColor: red,
+            backgroundColor: yellow,
             borderRadius: 14
         }]
     },
@@ -51,7 +51,7 @@ new Chart(document.getElementById("genreChart"), {
         datasets: [{
             data: [35, 25, 25, 15],
             backgroundColor: [
-                red,
+                yellow,
                 "#FF0000",
                 "#FF007F",
                 "#FFD800"
@@ -78,7 +78,7 @@ new Chart(document.getElementById("trendChart"), {
             label: "Valor demonstrativo",
             data: [30, 45, 40, 70],
             borderColor: green,
-            backgroundColor: "#8B0000",
+            backgroundColor: "#d3ef1d",
             fill: true,
             tension: 0.35
         }]
