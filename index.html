@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sound Dash</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <h2>♫ Sound<span>Dash</span></h2>
+
+        <nav>
+            <a href="#inicio" class="active">Visão geral</a>
+            <a href="#graficos">Gráficos</a>
+            <a href="#musicas">Músicas</a>
+        </nav>
+
+        <p class="sidebar-footer">Music Analytics · 2026</p>
+    </aside>
+
+    <main class="main-content" id="inicio">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">Seu Painel Musical</p>
+                <h1>Visão geral</h1>
+                <p class="subtitle">
+                    Explore dados e descubra tendências musicais.
+                </p>
+            </div>
+
+            <span class="status">● Dashboard online</span>
+        </header>
+
+        <section class="stats">
+            <article class="stat-card">
+                <p>Músicas analisadas</p>
+                <h2>120</h2>
+                <span>Dados demonstrativos</span>
+            </article>
+
+            <article class="stat-card">
+                <p>Artistas catalogados</p>
+                <h2>35</h2>
+                <span>Dados demonstrativos</span>
+            </article>
+
+            <article class="stat-card">
+                <p>Gêneros musicais</p>
+                <h2>8</h2>
+                <span>Dados demonstrativos</span>
+            </article>
+        </section>
+
+        <section id="graficos" class="charts-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Análise musical</h2>
+                    <p class="subtitle">
+                        Exemplos visuais para começar o projeto.
+                    </p>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <article class="chart-card">
+                    <h3>Músicas em destaque</h3>
+                    <p class="chart-description">
+                        Comparação ilustrativa de valores.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="musicChart"></canvas>
+                    </div>
+                </article>
+
+                <article class="chart-card">
+                    <h3>Distribuição por gênero</h3>
+                    <p class="chart-description">
+                        Exemplo de distribuição musical.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="genreChart"></canvas>
+                    </div>
+                </article>
+
+                <article class="chart-card chart-wide">
+                    <h3>Panorama musical</h3>
+                    <p class="chart-description">
+                        Exemplo de comparação entre períodos.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer>
+            Projeto acadêmico · Music Analytics
+        </footer>
+    </main>
+</body>
+</html>
