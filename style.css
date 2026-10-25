@@ -290,3 +290,185 @@ footer {
         padding: 16px;
     }
 }
+
+
+/* PESQUISA MUSICAL */
+
+.search-section {
+    margin-bottom: 36px;
+    padding: 24px;
+    background: var(--glass);
+    -webkit-backdrop-filter: var(--blur);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.search-section label {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.search-box {
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
+    color: var(--text);
+    background: rgba(0, 0, 0, 0.20);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.search-box input::placeholder {
+    color: var(--muted);
+    opacity: 0.8;
+}
+
+.search-box input:focus {
+    border-color: var(--yellow);
+    background: rgba(0, 0, 0, 0.30);
+}
+
+.search-box button {
+    padding: 0 22px;
+    color: var(--background);
+    background: var(--yellow);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.search-box button:hover {
+    transform: translateY(-1px);
+    filter: brightness(0.92);
+}
+
+.search-box button:active {
+    transform: scale(0.98);
+}
+
+.search-box button:focus-visible,
+.search-box input:focus-visible {
+    outline: 2px solid var(--yellow);
+    outline-offset: 3px;
+}
+
+#searchMessage {
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 220px), 1fr)
+    );
+    gap: 16px;
+    margin-top: 20px;
+}
+
+/* RESPONSIVIDADE DA PESQUISA */
+
+@media (max-width: 600px) {
+    .search-section {
+        padding: 18px;
+        margin-bottom: 28px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input {
+        width: 100%;
+        min-height: 46px;
+    }
+
+    .search-box button {
+        min-height: 46px;
+        width: 100%;
+    }
+
+    .search-results {
+        gap: 12px;
+    }
+}
+
+/* CARDS DOS RESULTADOS MUSICAIS */
+
+.music-result-card {
+    min-width: 0;
+    padding: 16px;
+    overflow-wrap: anywhere;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.music-result-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--yellow);
+}
+
+.music-result-card img {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 14px;
+}
+
+.music-result-card h3 {
+    margin: 0 0 8px;
+    color: var(--text);
+    font-size: 16px;
+}
+
+.music-result-card p {
+    margin: 5px 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.music-result-card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.music-result-card a:hover {
+    text-decoration: underline;
+}
+
+.search-box button:disabled {
+    cursor: wait;
+    opacity: 0.6;
+}
